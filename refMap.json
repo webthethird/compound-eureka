@@ -9,6 +9,8 @@
   "dai": "DAI",
   "g3": "StdComptrollerG3",
   "g4": "StdComptrollerG4",
+  "g8": "ComptrollerBefore",
+  "g9": "ComptrollerAfter",
   "g0": "StdComptroller",
   "comptroller": "Unitroller",
   "cDaiDelegate": "cDaiDelegate",

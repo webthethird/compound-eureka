@@ -349,6 +349,32 @@ define("Comptroller", {
 define("Comptroller", {
   match: {
     properties: {
+      generation: 'g8'
+    }
+  },
+  properties: {
+    generation: 'string'
+  },
+  contract: 'ComptrollerG8',
+  build: async ({deploy}, contract, props) => deploy(contract)
+});
+
+define("Comptroller", {
+  match: {
+    properties: {
+      generation: 'g9'
+    }
+  },
+  properties: {
+    generation: 'string'
+  },
+  contract: 'ComptrollerG9',
+  build: async ({deploy}, contract, props) => deploy(contract)
+});
+
+define("Comptroller", {
+  match: {
+    properties: {
       network: 'kovan'
     }
   },
@@ -435,6 +461,12 @@ define("Unitroller", {
               }, { canonical: '_become(address,uint256,address[],address[])' }]);
             break;
           case 'g4':
+            actions.push([comptroller, '_become(Unitroller unitroller)', { unitroller }, { canonical: '_become(address)' }]);
+            break;
+          case 'g8':
+            actions.push([comptroller, '_become(Unitroller unitroller)', { unitroller }, { canonical: '_become(address)' }]);
+            break;
+          case 'g9':
             actions.push([comptroller, '_become(Unitroller unitroller)', { unitroller }, { canonical: '_become(address)' }]);
             break;
           default:
