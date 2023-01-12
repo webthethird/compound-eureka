@@ -84,13 +84,16 @@ define('Comp', {
   contract: 'Comp',
   properties: {
     address: 'address',
+    account: 'address',
     block: {
       type: 'number',
       setter: async ({trx}, contract, block) => {}
     }
   },
-  build: async ({existing}, contract, { address }) => {
-    return existing(contract, address);
+  build: async ({deploy, ethereum}, contract, {account}) => {
+    return deploy(contract, {
+      account: account || ethereum.from
+    });
   }
 });
 
