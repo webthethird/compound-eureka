@@ -231,8 +231,8 @@ Comptroller#g1 [b73e68c] {
 
 Unitroller#comptroller [4aa526d] {
   admin: $admin
-  implementation: #g8
-  generation: "g8"
+  implementation: #g1
+  generation: "g1"
   oracle: #oracle
   close_factor: 0.5e18
   max_assets: 20
