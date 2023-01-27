@@ -3,4 +3,5 @@
 Unitroller#comptroller [b73e68c] {
   implementation: #g3
   generation: "g3"
+  comp_rate: 0.176e18
 }
